@@ -1,47 +1,47 @@
-// let student ={
-//     name:"lokesh",
-//     age:22,
-//     city:"Hyd"
-// }
-// let name="Aliya";
-// console.log(name);
-// console.log(student.name);
-// console.log(student,"student before changing the edit");
-// console.log(student.age);
-// console.log(student.city);
-// console.log(student['age']);
-// student.age=21;
-// console.log(student.age);
-// student.email="nagalokesh@paithacs.com";
-// console.log(student.email);
-// console.log(student,"student after changing the  edit");
-// delete student.email;
-// console.log(student);
-// let user = {
-//   name: "Ramakrishna",
-//   sayHello: function () {
-//     console.log("Hello " + this.name);
-//   },
-// };
-// user.sayHello();
+let student ={
+    name:"lokesh",
+    age:22,
+    city:"Hyd"
+}
+let name="Aliya";
+console.log(name);
+console.log(student.name);
+console.log(student,"student before changing the edit");
+console.log(student.age);
+console.log(student.city);
+console.log(student['age']);
+student.age=21;
+console.log(student.age);
+student.email="nagalokesh@paithacs.com";
+console.log(student.email);
+console.log(student,"student after changing the  edit");
+delete student.email;
+console.log(student);
+let user = {
+  name: "Ramakrishna",
+  sayHello: function () {
+    console.log("Hello " + this.name);
+  },
+};
+user.sayHello();
 
-// let user2={
-//     name:"aliya",
-//     sayhello:function(){
-//         console.log("hello " + this.name);
-//     }
-//     };user2.sayhello();
+let user2={
+    name:"aliya",
+    sayhello:function(){
+        console.log("hello " + this.name);
+    }
+    };user2.sayhello();
 
-// let person ={ name:"Hari"};
-// admin=person;
-// admin.name="anitha";
-// console.log(person.name)
-// let keys = Object.keys(student);
-// let values = Object.values(student);
-// let entries = Object.entries(student);
-// console.log(keys)
-// console.log(values)
-// console.log(entries)
+let person ={ name:"Hari"};
+admin=person;
+admin.name="anitha";
+console.log(person.name)
+let keys = Object.keys(student);
+let values = Object.values(student);
+let entries = Object.entries(student);
+console.log(keys)
+console.log(values)
+console.log(entries)
 
 let man = {
   name: "lokesh",
@@ -57,14 +57,44 @@ let man = {
     country: "India",
   },
 };
-// console.log(man);
-// console.log(man.address.city);
-// console.log(man.address.pincode);
-// // optional chaining
-// console.log(man?.phone);
+console.log(man);
+console.log(man.address.city);
+console.log(man.address.pincode);
+// optional chaining
+console.log(man?.phone);
 
-// looping through objects
+looping through objects
 
 for (let key in man){
     console.log(key,man[key])
 }
+
+
+// tasks
+//1) Create a student object with nested address
+let student={
+  name:"Hari",
+  age:20,
+  address:{
+    city:"guntur",
+    pincode:522233
+    phone no:7989728514
+  };
+};
+console.log(student);
+
+// 2) safely access misisng property using ?.
+
+let student1={
+  name:"sai",
+  age:20,
+  address:{
+    city:"guntur",
+    pincode:522233,
+    phoneNo:7989728514,
+  },
+};
+delete student1.address.phoneNo
+console.log(student.address?.phoneNo)
+console.log(student);
+
