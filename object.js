@@ -200,3 +200,93 @@ console.log(movie)
 console.log(product)
 console.log(userProfile)
 
+
+let a=5;
+let b=a;
+b=20;
+console.log(a)
+console.log(b)
+    
+let user1={
+    name:"lokesh"
+}
+console.log(user1.name)
+let user2=user1;
+user2.name="Hari"
+console.log(user1.name)
+console.log(user2.name)
+
+// Numbers are copied
+
+// objects are shared
+// objects variables doesn't store the object itself
+// They store the address of the objects
+
+// HOuse = objects
+// address = Reference
+
+
+let user1 = {
+  name:"Murari"
+}
+
+let user2 = Object.assign({}, user1)
+user2.name= "Mahesh"
+console.log(user1.name)
+console.log(user2.name)
+
+
+// spread operator (...)
+
+let user1 = {
+  name:"Murari"
+}
+
+let user2 = {...user1}
+user2.name= "Mahesh"
+
+console.log(user1.name)
+console.log(user2.name)
+
+
+
+
+let arr1 = [1,2,3]
+let arr2 = [...arr1]
+arr2.push(2)
+arr2.pop(2)
+console.log(arr1)
+console.log(arr2)
+
+// 1. Create an object and copy it using spread
+// 2. Modify copied object and verify original doesn't change
+// 3.Create an array and copy it using spread
+
+let person1={
+    name:"lokesh"
+}
+let person2={...person1}
+console.log(person1)
+console.log(person2)
+
+let a=[1,2,3,4]
+let b=[...a]
+b.push(5)
+console.log(a)
+console.log(b)
+
+// 4. Create a nested object and observe copy behaviour
+
+let person1={
+    name:"lokesh",
+    age:22,
+    address:{
+        city:"edlapadu",
+        state:"AP",
+    }
+}
+let person2={...person1.address}
+console.log(person1)
+console.log(person2)
+
+
