@@ -41,3 +41,67 @@ console.log(fruits);
 
 // array.splice(start, deleteCount, item1, item2)
 
+let arr = [1,2,3,4,5,6]
+console.log(arr)
+arr.splice(1,3)  //remove2 items from index1
+console.log(arr)
+
+arr.splice(1,0,"A","B")
+console.log(arr)
+
+arr.splice(1,1, "X")
+console.log(arr)
+
+// indexOf()
+
+let colors = ["red", "blue", "green"];
+
+let index = colors.indexOf("blue");
+
+console.log(index);
+
+console.log(colors.includes("PINK"));
+
+let numbers = [1, 2, 3];
+
+numbers.forEach(function (num) {
+  console.log(num * 2);
+});
+
+
+// map()
+
+let numbers2 = [1, 2, 3];
+
+let doubled = numbers2.map((num) => num * 3);
+
+console.log(doubled);
+
+//filter()
+
+let numbers3 = [1, 2, 3, 4, 5, 6];
+
+let evens = numbers3.filter((num) => num % 2 === 0);
+console.log(evens);
+
+
+// find()
+
+let numbers4 = [10, 20, 30, 40];
+let result = numbers4.find((num) => num > 15);
+console.log(result);
+console.log(numbers4.findIndex((num) => num > 15));
+
+
+let numbers5 = [1,2,3,4]
+
+let sum = numbers5.reduce((total,num)=>{
+  return total+num
+},5)
+
+console.log(sum)
+
+let numbers6 = [10, 2, 5]
+console.log(numbers6.sort( (a, b) => a-b ))
+console.log(numbers6.sort( (a, b) => b-a ))
+
