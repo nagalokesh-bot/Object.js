@@ -5,7 +5,7 @@
 // When you pass a callback, you pass the function reference (its name) without parentheses (). 
 // Adding parentheses would execute the function immediately instead of waiting for the outer function to trigger it.
 
-
+// ex;-1
         function greet(name){
     console.log(`Hello `+name);
 };
@@ -14,6 +14,30 @@ function lokesh(callback){
     callback(name);
 };
 lokesh(greet);
+
+// ex:-2
+
+function greet(name, callback) {
+  console.log("1a. Hello, " + name);
+  callback(); // invoke the callback
+}
+
+function sayBye() {
+  console.log("1a. Goodbye!");
+}
+
+greet("Alice", sayBye);
+// Output:
+// Hello, Alice
+// Goodbye!
+
+// 1b. Anonymous function as callback
+greet("Bob", function () {
+  console.log("1b. See you later!");
+});
+
+// 1c. Arrow function as callback
+greet("Charlie", () => console.log("1c. Take care!"));
 
 
 // // //  2) setTimeout :-setTimeout is a built-in JavaScript tool used to run a specific piece of code after a certain amount of time has passed.
